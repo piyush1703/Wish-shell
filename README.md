@@ -1,8 +1,7 @@
 # Wish-shell
 
-Developed a simple similar Unix shell named Wish. The shell is the heart of
-the command-line interface, and thus is central to the Unix/C programming
-environment.
+Developed a basic Unix shell named Wish, shell serves as the core of the
+command-line interface and important to the Unix/C programming environment.
 
 
 ## Overview
