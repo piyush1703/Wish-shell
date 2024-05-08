@@ -50,14 +50,13 @@ int search_path(char*temp,char *arg){
 }
 
 char *trim(char *s) {
-  // trim leading spaces
+  
   while (isspace(*s))
     s++;
 
   if (*s == '\0')
-    return s; // empty string
+    return s; 
 
-  // trim trailing spaces
   char *end = s + strlen(s) - 1;
   while (end > s && isspace(*end))
     end--;
