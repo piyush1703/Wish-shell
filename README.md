@@ -78,11 +78,11 @@ command.
 Wish Shell supports `exit`, `cd`, and `path` as built-in
 commands.
 
-* `exit`: When the user types `exit`, your shell should simply call the `exit`
+* `exit`: When the user types `exit`, shell simply call the `exit`
   system call with 0 as a parameter. It is an error to pass any arguments to
   `exit`. 
 
-* `cd`: `cd` always take one argument (0 or >1 args should be signaled as an
+* `cd`: `cd` always take one argument (0 or >1 args is signaled as an
 error). To change directories, use the `chdir()` system call with the argument
 supplied by the user; if `chdir` fails, that is also an error.
 
@@ -90,7 +90,7 @@ supplied by the user; if `chdir` fails, that is also an error.
   separated by whitespace from the others. A typical usage would be like this:
   `wish> path /bin /usr/bin`, which would add `/bin` and `/usr/bin` to the
   search path of the shell. If the user sets path to be empty, then the shell
-  should not be able to run any programs (except built-in commands). The
+  is not be able to run any programs (except built-in commands). The
   `path` command always overwrites the old path with the newly specified
   path. 
 
@@ -100,10 +100,10 @@ Many times, a shell user prefers to send the output of a program to a file
 rather than to the screen. Redirection using the`>` character is implemented 
 with a slight change.
 
-For example, if a user types `ls -la /tmp > output`, nothing should be printed
-on the screen. Instead, the standard output of the `ls` program should be
+For example, if a user types `ls -la /tmp > output`, nothing is printed
+on the screen. Instead, the standard output of the `ls` program is being
 rerouted to the file `output`. In addition, the standard error output of
-the program should be rerouted to the file `output` (this
+the program is rerouted to the file `output` (this
 is a little different than standard redirection).
 
 ### Parallel Commands
@@ -116,7 +116,7 @@ wish> cmd1 & cmd2 args1 args2 & cmd3 args1
 ```
 
 In this case, instead of running `cmd1` and then waiting for it to finish,
-your shell should run `cmd1`, `cmd2`, and `cmd3` (each with whatever arguments
+shell run `cmd1`, `cmd2`, and `cmd3` (each with whatever arguments
 the user has passed to it) in parallel, *before* waiting for any of them to
 complete. 
 
